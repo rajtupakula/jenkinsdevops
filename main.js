@@ -1,22 +1,12 @@
-{
-  "name": "getintodevops-hellonode",
-  "version": "1.0.0",
-  "description": "A Hello World HTTP server",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/getintodevops/hellonode/"
-  },
-  "keywords": [
-    "node",
-    "docker",
-    "dockerfile"
-  ],
-  "author": "miiro@getintodevops.com",
-  "license": "ISC"
-}
-Contact GitHub API Training Shop Blog About
+// load the http module
+var http = require('http');
+
+// configure our HTTP server
+var server = http.createServer(function (request, response) {
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.end("Hello getintodevops.com\n");
+});
+
+// listen on localhost:8000
+server.listen(50000);
+console.log("Server listening at http://127.0.0.1:50000/");
