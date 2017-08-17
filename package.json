@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kkandula92@gmail.com/hellonode/"
+    "url": "https://github.com/jenkins/hellonode/"
   },
   "keywords": [
     "node",
     "docker",
     "dockerfile"
   ],
-  "author": "kkandula92@gmail.com",
+  "author": "jenkins",
   
 }
 Contact GitHub API Training Shop Blog About
