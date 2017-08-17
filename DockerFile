@@ -3,15 +3,15 @@ FROM node:7-onbuild
 
 
 RUN dnf install -y sudo && \
-    adduser user && \
-    echo "user ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/user && \
+    adduser jenkins && \
+    echo "jenkins ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/user && \
     chmod 0440 /etc/sudoers.d/user
 
-RUN su - user -c "touch mine"
+RUN su - jenkins -c "touch mine"
 
-CMD ["su", "-", "user", "-c", "/bin/bash"]
+CMD ["su", "-", "jenkins", "-c", "/bin/bash"]
 # set maintainer
-LABEL maintainer "kkandula92@gmail.com"
+LABEL maintainer "jenkins"
 
 # set a health check
 HEALTHCHECK --interval=5s \
