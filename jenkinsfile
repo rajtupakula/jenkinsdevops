@@ -7,7 +7,7 @@ node{
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("kaushik1/hellonode-test-kaushik")
+        app = docker.build("jenkins/hellonode-test-kaushik")
     }
 
     stage('Test image') {
